@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08090D" />
+  <title>SNAC ANIME — Hindi Dubbed Anime Collection</title>
+  <meta name="description" content="SNAC Anime — হিন্দি ডাব Anime-এর সেরা কালেকশন। Trending, Latest Anime এবং বাছাই করা ক্যাটাগরি এক জায়গায়। Telegram-এ যোগ দিন।" />
+  <meta name="keywords" content="SNAC Anime, Hindi Dubbed Anime, Anime Collection, Bengali Anime Website, Trending Anime" />
+  <meta name="author" content="SNAC ANIME" />
+  <meta property="og:title" content="SNAC ANIME — Hindi Dubbed Anime Collection" />
+  <meta property="og:description" content="হিন্দি ডাব Anime-এর সেরা কালেকশন — Trending, Latest, Categories। Telegram-এ যোগ দিন।" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://snac-anime.vercel.app/" />
+  <meta property="og:site_name" content="SNAC ANIME" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23E11D48'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="SNAC ANIME হোম">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">SNAC <span>ANIME</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active" data-i18n="nav.home">হোম</a></li>
+          <li><a href="#all-section" data-i18n="nav.all">সব Anime</a></li>
+          <li><a href="#categories" data-i18n="nav.categories">ক্যাটাগরি</a></li>
+          <li><a href="about.html" data-i18n="nav.about">সম্পর্কে</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="search-box">
+          <span class="icon">🔍</span>
+          <input type="search" id="navSearch" placeholder="Anime খুঁজুন..." aria-label="Anime সার্চ" data-i18n-ph="nav.search" />
+        </div>
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-btn" id="langBtn" aria-label="Change language" data-i18n-title="lang.label">
+            <span data-lang-flag>🇧🇩</span>
+            <span data-lang-current>বাংলা</span>
+            <span class="lang-caret">▾</span>
+          </button>
+          <div class="lang-menu" id="langMenu" role="menu">
+            <button data-lang="bn" role="menuitem">🇧🇩 বাংলা</button>
+            <button data-lang="en" role="menuitem">🇬🇧 English</button>
+            <button data-lang="hi" role="menuitem">🇮🇳 हिन्दी</button>
+          </div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="মেনু খুলুন" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu" aria-label="Mobile menu">
+      <div class="m-search">
+        <span>🔍</span>
+        <input type="search" id="mobileSearch" placeholder="Anime খুঁজুন..." aria-label="Mobile Anime সার্চ" data-i18n-ph="nav.search" />
+      </div>
+      <a href="index.html" data-i18n="nav.home">হোম</a>
+      <a href="#all-section" data-i18n="nav.all">সব Anime</a>
+      <a href="#categories" data-i18n="nav.categories">ক্যাটাগরি</a>
+      <a href="about.html" data-i18n="nav.about">সম্পর্কে</a>
+      <a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a>
+      <a href="disclaimer.html" data-i18n="nav.disclaimer">Disclaimer</a>
+      <a href="admin.html" data-i18n="nav.admin">Admin Panel</a>
+      <a href="https://t.me/SNAC_hindi_anime" target="_blank" rel="noopener noreferrer" data-i18n="nav.telegram">✈️ Telegram</a>
+
+      <div class="m-lang">
+        <div class="m-lang-label">🌐 <span data-i18n="lang.label">ভাষা</span></div>
+        <div class="m-lang-options">
+          <button data-lang="bn">🇧🇩 বাংলা</button>
+          <button data-lang="en">🇬🇧 English</button>
+          <button data-lang="hi">🇮🇳 हिन्दी</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="badge"><span class="dot"></span> <span data-i18n="hero.badge">Hindi Dubbed Anime Collection</span></span>
+      <h1>
+        <span data-i18n="hero.title1">আপনার প্রিয়</span>
+        <span class="grad" data-i18n="hero.title2">Anime</span>
+        <br />
+        <span data-i18n="hero.title3">এখন এক জায়গায়।</span>
+      </h1>
+      <p data-i18n="hero.desc">
+        SNAC ANIME-এ পাবেন Trending, Latest এবং বাছাই করা হিন্দি ডাব Anime-এর সম্পূর্ণ কালেকশন।
+        সুন্দরভাবে সাজানো, দ্রুত সার্চ, আর এক ক্লিকে Telegram-এ।
+      </p>
+      <div class="hero-actions">
+        <a href="#all-section" class="btn btn-primary" id="exploreBtn" data-i18n="hero.explore">🚀 Explore Anime</a>
+        <a href="https://t.me/SNAC_hindi_anime" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="hero.join">✈️ Telegram-এ যোগ দিন</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRENDING ================= -->
+  <section class="section" id="trending">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" data-i18n="sec.trending">Trending Anime</h2>
+          <div class="section-sub" data-i18n="sec.trendingSub">জনপ্রিয় এবং সর্বাধিক দেখা Anime</div>
+        </div>
+        <a href="#all-section" class="btn btn-ghost" style="padding:9px 18px;font-size:0.85rem;" data-i18n="sec.viewAll">সব দেখুন →</a>
+      </div>
+      <div class="anime-grid" id="trendingGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ================= LATEST ================= -->
+  <section class="section" id="latest">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" data-i18n="sec.latest">Latest Anime</h2>
+          <div class="section-sub" data-i18n="sec.latestSub">নতুন যোগ হওয়া Anime</div>
+        </div>
+      </div>
+      <div class="anime-grid" id="latestGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ================= ALL + FILTERS ================= -->
+  <section class="section" id="all-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" data-i18n="sec.all">সব Anime</h2>
+          <div class="section-sub" data-i18n="sec.allSub">সার্চ, জেনার এবং ভাষা দিয়ে ফিল্টার করুন</div>
+        </div>
+      </div>
+      <div class="filter-bar" role="search">
+        <label for="filterSearch" data-i18n="filter.search">সার্চ</label>
+        <input type="search" id="filterSearch" placeholder="Anime-এর নাম..." style="flex:1 1 200px;min-width:150px;" data-i18n-ph="filter.searchPh" />
+        <label for="genreSelect" data-i18n="filter.genre">জেনার</label>
+        <select id="genreSelect">
+          <option value="all" data-i18n="filter.all">সব</option>
+          <option value="Action">Action</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Romance">Romance</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Supernatural">Supernatural</option>
+        </select>
+        <label for="languageSelect" data-i18n="filter.language">ভাষা</label>
+        <select id="languageSelect">
+          <option value="all" data-i18n="filter.all">সব</option>
+          <option value="Hindi Dubbed">Hindi Dubbed</option>
+          <option value="Subtitle">Subtitle</option>
+        </select>
+        <label for="sortSelect" data-i18n="filter.sort">সাজান</label>
+        <select id="sortSelect">
+          <option value="latest" data-i18n="filter.sortLatest">নতুন আগে</option>
+          <option value="oldest" data-i18n="filter.sortOldest">পুরনো আগে</option>
+          <option value="az" data-i18n="filter.sortAz">A → Z</option>
+          <option value="za" data-i18n="filter.sortZa">Z → A</option>
+          <option value="rating" data-i18n="filter.sortRating">রেটিং</option>
+        </select>
+        <label for="sectionSelect" data-i18n="filter.section">সেকশন</label>
+        <select id="sectionSelect">
+          <option value="all" data-i18n="filter.all">সব</option>
+          <option value="trending" data-i18n="filter.trending">Trending</option>
+          <option value="latest" data-i18n="filter.latest">Latest</option>
+        </select>
+        <button class="btn btn-ghost" id="clearFilters" type="button" style="padding:9px 16px;font-size:0.85rem;" data-i18n="filter.reset">রিসেট</button>
+        <span class="spacer"></span>
+        <span class="filter-count" id="filterCount"></span>
+      </div>
+      <div class="anime-grid" id="allGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ================= CATEGORIES ================= -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" data-i18n="sec.categories">Anime Categories</h2>
+          <div class="section-sub" data-i18n="sec.categoriesSub">আপনার পছন্দের জেনার বেছে নিন</div>
+        </div>
+      </div>
+      <div class="cat-grid" id="catGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= TELEGRAM BANNER ================= -->
+  <section class="container">
+    <div class="tg-banner">
+      <div>
+        <h3 data-i18n="tg.title">📢 SNAC Telegram-এ যোগ দিন</h3>
+        <p data-i18n="tg.desc">সবচেয়ে আগে নতুন Anime আপডেট, রিলিজ নোটিফিকেশন এবং একচেটিয়া কনটেন্ট পেতে আমাদের Telegram চ্যানেলে যোগ দিন।</p>
+      </div>
+      <a href="https://t.me/SNAC_hindi_anime" class="btn btn-tg" target="_blank" rel="noopener noreferrer" data-i18n="tg.join">✈️ Join Telegram</a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:8px;">
+            <span class="logo-mark">S</span>
+            <span class="logo-text">SNAC <span>ANIME</span></span>
+          </div>
+          <p class="desc" data-i18n="footer.desc">আপনার প্রিয় Hindi Dubbed Anime এক জায়গায়। Premium, দ্রুত এবং সম্পূর্ণ ফ্রি।</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.nav">নেভিগেশন</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">হোম</a></li>
+            <li><a href="#all-section" data-i18n="nav.all">সব Anime</a></li>
+            <li><a href="#categories" data-i18n="nav.categories">ক্যাটাগরি</a></li>
+            <li><a href="about.html" data-i18n="nav.about">সম্পর্কে</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.legal">লিগ্যাল</h4>
+          <ul>
+            <li><a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a></li>
+            <li><a href="disclaimer.html" data-i18n="nav.disclaimer">Disclaimer</a></li>
+            <li><a href="about.html#contact" data-i18n="nav.about">Contact</a></li>
+            <li><a href="admin.html" data-i18n="nav.admin">Admin</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact">যোগাযোগ</h4>
+          <ul>
+            <li><a href="https://t.me/SNAC_hindi_anime" target="_blank" rel="noopener noreferrer" data-i18n="footer.tgChannel">✈️ Telegram Channel</a></li>
+            <li><a href="mailto:contact@example.com" data-i18n="footer.email">📧 Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © <span id="year"></span> SNAC ANIME — <span data-i18n="footer.rights">All rights reserved. Made with ❤️ for Anime fans.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <button class="to-top" id="toTop" aria-label="উপরে যান">↑</button>
+
+  <script src="anime-data.js"></script>
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
