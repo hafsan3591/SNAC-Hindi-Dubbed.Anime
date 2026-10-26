@@ -1,9 +1,9 @@
 // script.js — SNAC ANIME core logic
+// ★ শুধু anime-data.js থেকে anime লোড হয় ★
+// ★ localStorage এর ডেটা আর ব্যবহার হয় না ★
 (function () {
   "use strict";
 
-  const CUSTOM_KEY = "snac_custom_anime";
-  const POSTER_OVERRIDE_KEY = "snac_poster_overrides";
   const state = { search: "", genre: "all", language: "all", sort: "latest", section: "all" };
   const GENRES = ["Action", "Adventure", "Fantasy", "Romance", "Comedy", "Supernatural"];
 
@@ -16,35 +16,10 @@
   const animeUrl = (a) => safeTelegram(a.telegramUrl);
   const t = (key, vars) => window.i18n ? i18n.t(key, vars) : key;
 
-  function getPosterOverrides() {
-    try { return JSON.parse(localStorage.getItem(POSTER_OVERRIDE_KEY) || "{}"); }
-    catch { return {}; }
-  }
-  function applyPosterOverride(a) {
-    const ov = getPosterOverrides();
-    if (ov[a.id]) return { ...a, poster: ov[a.id] };
-    return a;
-  }
-  function getCustomAnime() {
-    try { return JSON.parse(localStorage.getItem(CUSTOM_KEY) || "[]"); }
-    catch { return []; }
-  }
-
-  let _cache = null;
+  // ★★★ এখানে শুধু anime-data.js থেকে ডেটা আসে ★★★
   function getAllAnime() {
-    if (_cache) return _cache;
-    const base = typeof animeList !== "undefined" ? animeList : [];
-    const custom = getCustomAnime();
-    const map = new Map();
-    base.forEach((a) => map.set(a.id, { ...a }));
-    custom.forEach((a) => {
-      if (a._deleted) map.delete(a.id);
-      else map.set(a.id, { ...a });
-    });
-    _cache = Array.from(map.values()).map(applyPosterOverride);
-    return _cache;
+    return typeof animeList !== "undefined" ? animeList : [];
   }
-  function invalidateCache() { _cache = null; }
 
   function buildPoster(a) {
     const wrapper = document.createElement("div");
@@ -67,6 +42,7 @@
       img.loading = "lazy";
       img.decoding = "async";
       img.referrerPolicy = "no-referrer";
+      img.crossOrigin = "anonymous";
       img.src = poster;
       let errored = false;
       img.addEventListener("load", () => img.classList.add("loaded"));
@@ -183,7 +159,6 @@
   }
 
   function renderAll() {
-    invalidateCache();
     const all = getAllAnime();
     const trending = all.filter((a) => a.trending).slice(0, 8);
     const latest = all.filter((a) => a.latest).sort((a, b) => (b.year || 0) - (a.year || 0)).slice(0, 8);
@@ -384,17 +359,7 @@
     window.addEventListener("snac:langchange", markActive);
   }
 
-  window.addEventListener("storage", (e) => {
-    if (e.key === CUSTOM_KEY || e.key === POSTER_OVERRIDE_KEY) {
-      invalidateCache();
-      renderAll();
-    }
-  });
-
-  window.addEventListener("snac:langchange", () => {
-    invalidateCache();
-    renderAll();
-  });
+  window.addEventListener("snac:langchange", () => renderAll());
 
   document.addEventListener("DOMContentLoaded", () => {
     renderAll();
@@ -406,5 +371,5 @@
     setupLanguageSwitcher();
   });
 
-  window.SNAC = { openModal, closeModal, renderAll, invalidateCache };
+  window.SNAC = { openModal, closeModal, renderAll };
 })();
