@@ -1,31 +1,188 @@
-// anime-data.js — SNAC ANIME Database
-// ★ এখানে যা anime থাকবে, সবাই ওয়েবসাইটে দেখতে পাবে ★
-//
-// নিয়ম:
-// - Admin panel থেকে anime add করুন → Export করুন → সেই কোড এখানে paste করুন
-// - প্রতিটা anime এর পরে কমা (,) দিতে ভুলবেন না
-// - শেষ anime এর পরে কমা দিবেন না
+// anime-data.js — SNAC ANIME Default Database
 
 const DEFAULT_TELEGRAM = "https://t.me/SNAC_hindi_anime";
 
 const animeList = [
-  // ★ এখানে আপনার anime যোগ করুন ★
-  // উদাহরণ:
-  // {
-  //   id: "solo-leveling",
-  //   title: "Solo Leveling",
-  //   titleBn: "সোলো লেভেলিং",
-  //   genre: ["Action", "Fantasy"],
-  //   year: 2024,
-  //   language: "Hindi Dubbed",
-  //   status: "Ongoing",
-  //   rating: 8.4,
-  //   trending: true,
-  //   latest: true,
-  //   poster: "https://i.imgur.com/abc123.jpg",
-  //   description: "বর্ণনা...",
-  //   telegramUrl: "https://t.me/SNAC_hindi_anime/7"
-  // },
+  {
+    id: "naruto-shippuden",
+    title: "Naruto Shippuden",
+    titleBn: "নারুতো শিপ্পুডেন",
+    genre: ["Action", "Adventure", "Comedy"],
+    year: 2007,
+    language: "Hindi Dubbed",
+    status: "Completed",
+    rating: 8.7,
+    trending: true,
+    latest: false,
+    poster: "https://image.tmdb.org/t/p/w500/x800OYHuJ9JDuhHxwUNkRJgQ8c1p.jpg",
+    description: "Naruto returns after two and a half years of training with Jiraiya, stronger and ready to face the Akatsuki and protect his village.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "demon-slayer",
+    title: "Demon Slayer",
+    titleBn: "ডেমন স্লেয়ার",
+    genre: ["Action", "Adventure", "Supernatural"],
+    year: 2019,
+    language: "Hindi Dubbed",
+    status: "Ongoing",
+    rating: 8.9,
+    trending: true,
+    latest: true,
+    poster: "https://image.tmdb.org/t/p/w500/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
+    description: "Tanjiro Kamado becomes a demon slayer after his family is slaughtered and his sister Nezuko is turned into a demon.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "jujutsu-kaisen",
+    title: "Jujutsu Kaisen",
+    titleBn: "জুজুৎসু কাইসেন",
+    genre: ["Action", "Supernatural", "Fantasy"],
+    year: 2020,
+    language: "Hindi Dubbed",
+    status: "Ongoing",
+    rating: 8.6,
+    trending: true,
+    latest: true,
+    poster: "https://image.tmdb.org/t/p/w500/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg",
+    description: "Yuji Itadori swallows a cursed finger and joins a secret organization of Jujutsu Sorcerers to fight curses.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "one-piece",
+    title: "One Piece",
+    titleBn: "ওয়ান পিস",
+    genre: ["Action", "Adventure", "Fantasy", "Comedy"],
+    year: 1999,
+    language: "Hindi Dubbed",
+    status: "Ongoing",
+    rating: 8.9,
+    trending: true,
+    latest: false,
+    poster: "https://image.tmdb.org/t/p/w500/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
+    description: "Monkey D. Luffy and his pirate crew search for the legendary treasure One Piece to become the Pirate King.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "attack-on-titan",
+    title: "Attack on Titan",
+    titleBn: "অ্যাটাক অন টাইটান",
+    genre: ["Action", "Fantasy"],
+    year: 2013,
+    language: "Hindi Dubbed",
+    status: "Completed",
+    rating: 9.0,
+    trending: true,
+    latest: false,
+    poster: "https://image.tmdb.org/t/p/w500/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg",
+    description: "Eren Yeager vows to destroy the Titans after they breach the wall and kill his mother.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "my-hero-academia",
+    title: "My Hero Academia",
+    titleBn: "মাই হিরো একাডেমিয়া",
+    genre: ["Action", "Adventure", "Comedy"],
+    year: 2016,
+    language: "Hindi Dubbed",
+    status: "Ongoing",
+    rating: 8.2,
+    trending: true,
+    latest: false,
+    poster: "https://image.tmdb.org/t/p/w500/phY1JY4hOo6XcUjPGgQmVmSU4An.jpg",
+    description: "Izuku Midoriya, a boy born without superpowers, dreams of becoming a great hero.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "spy-x-family",
+    title: "Spy x Family",
+    titleBn: "স্পাই এক্স ফ্যামিলি",
+    genre: ["Action", "Comedy"],
+    year: 2022,
+    language: "Hindi Dubbed",
+    status: "Ongoing",
+    rating: 8.5,
+    trending: true,
+    latest: true,
+    poster: "https://image.tmdb.org/t/p/w500/3r4g1VfT2Y5Q0zT9L6xH8mN9pQk.jpg",
+    description: "A spy, an assassin, and a telepath form a fake family for a mission.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "chainsaw-man",
+    title: "Chainsaw Man",
+    titleBn: "চেইনসো ম্যান",
+    genre: ["Action", "Supernatural"],
+    year: 2022,
+    language: "Hindi Dubbed",
+    status: "Ongoing",
+    rating: 8.4,
+    trending: true,
+    latest: true,
+    poster: "https://image.tmdb.org/t/p/w500/npdB6eFzizki0WaZ1OvKcJrWe97.jpg",
+    description: "Denji merges with his pet devil Pochita and becomes Chainsaw Man.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "solo-leveling",
+    title: "Solo Leveling",
+    titleBn: "সোলো লেভেলিং",
+    genre: ["Action", "Adventure", "Fantasy"],
+    year: 2024,
+    language: "Hindi Dubbed",
+    status: "Ongoing",
+    rating: 8.3,
+    trending: true,
+    latest: true,
+    poster: "https://image.tmdb.org/t/p/w500/geCRueV3ElhRTr0xtJuEWJt6dJ1.jpg",
+    description: "Sung Jinwoo, the weakest hunter, gains the ability to level up endlessly.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "death-note",
+    title: "Death Note",
+    titleBn: "ডেথ নোট",
+    genre: ["Supernatural", "Action"],
+    year: 2006,
+    language: "Hindi Dubbed",
+    status: "Completed",
+    rating: 9.0,
+    trending: false,
+    latest: false,
+    poster: "https://image.tmdb.org/t/p/w500/tCZFfYTIwrR7n94J6G14Y4hAFU6.jpg",
+    description: "Light Yagami finds a notebook that kills anyone whose name is written in it.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "fullmetal-alchemist",
+    title: "Fullmetal Alchemist: Brotherhood",
+    titleBn: "ফুলমেটাল অ্যালকেমিস্ট",
+    genre: ["Action", "Adventure", "Fantasy"],
+    year: 2009,
+    language: "Hindi Dubbed",
+    status: "Completed",
+    rating: 9.1,
+    trending: false,
+    latest: false,
+    poster: "https://image.tmdb.org/t/p/w500/5ZFUEOULaVml7pQuXxhpR2cn5C6.jpg",
+    description: "Two brothers search for the Philosopher's Stone to restore their bodies.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  },
+  {
+    id: "tokyo-ghoul",
+    title: "Tokyo Ghoul",
+    titleBn: "টোকিও গুল",
+    genre: ["Action", "Supernatural"],
+    year: 2014,
+    language: "Hindi Dubbed",
+    status: "Completed",
+    rating: 7.8,
+    trending: false,
+    latest: false,
+    poster: "https://image.tmdb.org/t/p/w500/7sBq0F4N2Q2f4R9cX7uLr9Y6t8K.jpg",
+    description: "Ken Kaneki becomes a half-ghoul after a chance encounter with a ghoul.",
+    telegramUrl: "https://t.me/SNAC_hindi_anime"
+  }
 ];
 
 if (typeof module !== "undefined" && module.exports) {
